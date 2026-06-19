@@ -1,0 +1,130 @@
+:root{
+    --Blue600: hsl(185, 75%, 39%);
+    --Navy950: hsl(229, 23%, 23%);
+    --Gray500: hsl(227, 10%, 46%);
+    --Gray100: hsl(225, 10%, 92%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Kumbh Sans", sans-serif;
+
+}
+
+body{
+    min-height: 100dvh;
+
+    background-color: var(--Blue600);
+    background-image: 
+        url(./images/bg-pattern-bottom.svg),
+        url(./images/bg-pattern-top.svg)
+    ;
+
+    background-repeat: no-repeat, no-repeat;
+
+    background-position: 
+        left 50vw top 50vh,
+        right 50vw bottom 50vh;
+    ;
+
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+}
+
+main{
+    flex:1;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    
+    margin: clamp(0rem, 5vw, 2rem);
+}
+
+
+.card{
+    background-color: white;
+
+    color: var(--Navy950);
+
+    border-radius: 0.5rem;
+
+    width: clamp(16rem, 90vw, 20rem);
+    height: 22rem;
+
+
+    background-image: url(/images/bg-pattern-card.svg);
+     background-size: 100% 8rem;
+
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 1rem;
+
+}
+
+.card img{
+    max-width: 6rem;
+    border-radius: 5rem;
+    border: .3rem solid white;
+}
+
+.card h1{
+    font-size: 1.2rem;
+}
+
+.card h1 span{
+    font-weight: 400;
+    color: var(--Gray500);
+}
+
+.card p{
+    font-size: 1rem;
+    color: var(--Gray500);
+}
+
+.stats{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1.3rem;
+    width: 100%;
+    border-top: 0.1rem solid var(--Gray100);
+}
+
+.stat{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat p{
+    font-size: 0.8rem;
+    color: var(--Gray500);
+}
+
+.attribution{
+    margin-top: auto;
+
+    padding: 1rem;
+
+    text-align: center;
+
+    font-size: 0.75rem;
+    color: rgba(255,255,255,.8);
+}
+
+.attribution a{
+    color: var(--Navy950);
+    background-color: white;
+    padding: .15rem .4rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 700;
+}
